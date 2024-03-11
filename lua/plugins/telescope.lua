@@ -3,6 +3,11 @@ local mapKey = require("utils.mapKey")
 function config()
   local telescope = require("telescope")
   telescope.setup({
+    defaults = {
+      file_ignore_patterns = {
+        "%.git/"
+      }
+    },
     pickers = {
       find_files = {
         hidden = true, -- include dotfiles
