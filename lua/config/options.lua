@@ -35,11 +35,8 @@ opt.errorbells = false -- disable error sounds
 opt.swapfile = false -- disable swap files
 opt.undofile = true -- create files containing the history of all changes to a file to allow for undoing even after reopening vim
 opt.undodir = vim.fn.expand("~/.vim/undodir")
--- add support for using normal mode when Russian is selected in the os
-opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 opt.splitright = true -- split new horizontal windows to the right
 opt.splitbelow = true -- split new vertical windows to below the current window 
-opt.iskeyword:append("-") -- when deleting back one word, treat words separated by hyphens as one word
 opt.mouse:append("a") -- allow using the mouse in (a)ll modes
 opt.clipboard:append("unnamedplus") -- allow pasting outside of vim
 opt.history = 50 -- command history length
