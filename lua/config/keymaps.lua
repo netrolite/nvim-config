@@ -16,3 +16,10 @@ mapKey("<leader>lz", ":Lazy<CR>")
 mapKey("<C-s>", ":w<CR>")
 
 mapKey("q", "<nop>")
+
+-- indentation
+mapKey("<", "<gv", "v")
+mapKey(">", ">gv", "v")
+mapKey("<", "<<")
+mapKey(">", ">>")
+
