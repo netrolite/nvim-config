@@ -8,5 +8,5 @@ return {
       min_count_to_highlight = 2,
     })
   end,
-  lazy = false
+  event = "VeryLazy"
 }
