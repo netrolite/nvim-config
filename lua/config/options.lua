@@ -38,6 +38,5 @@ opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.splitright = true -- split new horizontal windows to the right
 opt.splitbelow = true -- split new vertical windows to below the current window 
 opt.mouse:append("a") -- allow using the mouse in (a)ll modes
-opt.clipboard:append("unnamedplus") -- allow pasting outside of vim
 opt.history = 50 -- command history length
 opt.scrolloff = 15
