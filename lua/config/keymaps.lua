@@ -15,6 +15,7 @@ mapKey("<leader>sv", ":vsplit<CR>")
 mapKey("<leader>lz", ":Lazy<CR>")
 mapKey("<C-s>", ":w<CR>")
 
+-- disable q
 mapKey("q", "<nop>")
 
 -- indentation
