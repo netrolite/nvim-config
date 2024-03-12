@@ -1,4 +1,4 @@
 local cmd = vim.cmd
 
 -- format on save
-cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+cmd [[au BufWritePre * lua vim.lsp.buf.format()]]
