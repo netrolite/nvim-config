@@ -12,6 +12,12 @@ function config()
       find_files = {
         hidden = true, -- include dotfiles
         theme = "dropdown"
+      },
+      buffers = {
+        theme = "dropdown"
+      },
+      current_buffer_fuzzy_find = {
+        theme =  "dropdown"
       }
     }
   })
