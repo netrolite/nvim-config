@@ -24,3 +24,10 @@ mapKey(">", ">gv", "v")
 mapKey("<", "<<")
 mapKey(">", ">>")
 
+-- switching buffers
+mapKey("<C-i>", ":bp<CR>")
+mapKey("<C-o>", ":bn<CR>")
+
+-- close current buffer
+mapKey("<leader>q", ":bd<CR>")
+
