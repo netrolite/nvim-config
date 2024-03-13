@@ -9,7 +9,6 @@ return {
     }
   }, -- this config is passed to `require("nvim-tree").setup(config)`
   keys = {
-    mapKey("<leader>n", ":NvimTreeToggle<CR>"),
-    mapKey("<leader>N", ":NvimTreeFocus<CR>")
+    mapKey("<leader>N", ":NvimTreeToggle<CR>"),
   }
 }
