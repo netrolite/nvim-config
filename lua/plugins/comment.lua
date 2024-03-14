@@ -1,8 +1,22 @@
 return {
     'numToStr/Comment.nvim',
-    lazy = false,
-    config = function()
-      require("Comment").setup({
+    keys = {
+      {
+        "<leader>/",
+        "<leader>/"
+      },
+      {
+        "<leader>/",
+        "<leader>/",
+        mode = "v"
+      },
+      {
+        "<leader>b/",
+        "<leader>b/",
+        mode = "v"
+      }
+    },
+    opts = {
         toggler = {
           line = "<leader>/",
           block = "<nop>"
@@ -14,6 +28,5 @@ return {
         mappings = {
           extra = false -- don't create unnecessary mappings
         }
-      })
-    end
+    }
 }

@@ -31,3 +31,5 @@ mapKey("<C-o>", ":bn<CR>")
 -- close current buffer
 mapKey("<leader>q", ":bd<CR>")
 
+-- format
+mapKey("<leader>fm", ":lua vim.lsp.buf.format()<CR>")
