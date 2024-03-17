@@ -39,3 +39,9 @@ mapKey("K", ":m '<-2<CR>gv=gv", { mode = "x" })
 -- swap back/forward keymaps
 mapKey("<C-o>", "<C-i>")
 mapKey("<C-i>", "<C-o>")
+
+-- buffers
+mapKey("H", ":BufferLineCyclePrev<CR>")
+mapKey("L", ":BufferLineCycleNext<CR>")
+mapKey("<C-h>", ":BufferLineMoveNext<CR>")
+mapKey("<C-l>", ":BufferLineMovePrev<CR>")
