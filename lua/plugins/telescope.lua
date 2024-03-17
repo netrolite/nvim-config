@@ -23,6 +23,7 @@ return {
   config = config,
   dependencies = { "nvim-lua/plenary.nvim" },
   lazy = false,
+  branch = "0.1.x",
   keys = { -- only available after the plugin has loaded
     vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>"),
     vim.keymap.set('n', '<leader>fa', ":Telescope<CR>"),
