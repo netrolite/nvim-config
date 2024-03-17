@@ -5,11 +5,10 @@ mapKey("<C-j>", "<C-w>j")
 mapKey("<C-k>", "<C-w>k")
 mapKey("<C-h>", "<C-w>h")
 mapKey("<C-l>", "<C-w>l")
-mapKey("<C-Up>", ":resize -2<CR>")
-mapKey("<C-Down>", ":resize +2<CR>")
-mapKey("<C-Left>", ":resize vertical +2<CR>")
-mapKey("<C-Right>", ":resize vertical -2<CR>")
-
+mapKey("<C-[>", ":resize -2<CR>")
+mapKey("<C-]>", ":resize +2<CR>")
+mapKey("<C-->", ":vertical resize +2<CR>")
+mapKey("<C-=>", ":vertical resize -2<CR>")
 
 -- splits
 mapKey("<leader>sh", ":split<CR>")
