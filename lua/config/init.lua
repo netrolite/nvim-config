@@ -2,6 +2,10 @@ require("config.globals")
 require("config.options")
 require("config.keymaps")
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then -- if lazy.nvim is not installed then install it
   vim.fn.system({
