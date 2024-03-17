@@ -3,7 +3,6 @@ local opt = vim.opt
 -- tabs & indentation
 opt.tabstop = 2 -- number of spaces for a tab character
 opt.shiftwidth = 2 -- number of spaces for each level of indentation
-
 opt.softtabstop = 2 -- number of spaces for tab in insert mode
 opt.expandtab = true -- convert tabs to spaces
 opt.smartindent = true -- autoindentation
@@ -18,17 +17,11 @@ opt.smartcase = true -- don't ignore case in search term characters that are cap
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true -- allow all colors (aka enable 24-bit colors)
--- opt.colorcolumn -- column for line length
 opt.signcolumn = "yes" -- a column separate from line numbers that shows warnings errors, etc...
--- opt.cmdheight = 10 -- the height of the command-line area. This area is where you type commands and see messages such as those produced by commands like :echo or error messages.
 opt.scrolloff = 10
 
-opt.completeopt = "menuone,noinsert,noselect,longest" -- completion menu settings
--- menuone = display the menu even if there's only 1 completion item
--- noinsert = don't automatically insert the first completion item into the buffer
--- noselect = don't automatically select the first completion item
--- longest = make the longest match the first item in the list
-
+-- completion menu settings (now specified in nvim-cmp.lua)
+-- opt.completeopt = "menu,menuone"
 
 -- behavior
 opt.errorbells = false -- disable error sounds

@@ -13,12 +13,7 @@ local config = function()
 			lualine_x = { "filetype" },
 			lualine_y = { "fileformat" },
 			lualine_z = { "progress" },
-		},
-		tabline = {
-			lualine_a = { "buffers" },
-      lualine_y = { "windows" },
-      lualine_z = { "tabs" }
-    },
+		}
 	})
 end
 

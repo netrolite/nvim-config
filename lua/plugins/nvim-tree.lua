@@ -1,14 +1,15 @@
-local mapKey = require("utils.mapKey")
-
 return {
   "nvim-tree/nvim-tree.lua",
   lazy = false,
-  config = {
+  opts = {
     update_focused_file = {
-      enable = true
+      enable = true,
+    },
+    view = {
+      relativenumber = true
     }
-  }, -- this config is passed to `require("nvim-tree").setup(config)`
+  },
   keys = {
-    mapKey("<leader>N", ":NvimTreeToggle<CR>"),
+    { "<leader>N", ":NvimTreeToggle<CR>"}
   }
 }
