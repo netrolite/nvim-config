@@ -1,6 +1,4 @@
-local mapKey = require("utils.mapKey")
-
-function config()
+local function config()
   local telescope = require("telescope")
   telescope.setup({
     defaults = {
@@ -14,8 +12,6 @@ function config()
       },
     }
   })
-
-  local builtin = require('telescope.builtin')
 end
 
 return {
