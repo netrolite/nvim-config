@@ -36,12 +36,12 @@ mapKey("<leader>nh", ":noh<CR>")
 mapKey("J", ":m '>+1<CR>gv=gv", { mode = "x" })
 mapKey("K", ":m '<-2<CR>gv=gv", { mode = "x" })
 
--- swap back/forward keymaps
+-- swap jump back/forward keymaps
 mapKey("<C-o>", "<C-i>")
 mapKey("<C-i>", "<C-o>")
 
 -- buffers
 mapKey("H", ":BufferLineCyclePrev<CR>")
 mapKey("L", ":BufferLineCycleNext<CR>")
-mapKey("<C-h>", ":BufferLineMoveNext<CR>")
-mapKey("<C-l>", ":BufferLineMovePrev<CR>")
+mapKey("<leader>q", ":bp<bar>sp<bar>bn<bar>bd<CR>")
+

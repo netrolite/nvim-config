@@ -6,10 +6,18 @@ return {
     local bufferline = require("bufferline")
     bufferline.setup({
       options = {
-        style_preset = bufferline.style_preset.default,
         diagnostics = "nvim_lsp",
-        offsets = { { filetype = "NvimTree" } },
-        show_buffer_close_icons = false
+        offsets = {
+          {
+            filetype = "NvimTree",
+            highlight = "Directory",
+            separator = "|"
+          }
+        },
+        show_buffer_close_icons = false,
+        style_preset = {
+          bufferline.style_preset.minimal
+        }
       }
     })
   end

@@ -1,6 +1,7 @@
 require("config.globals")
 require("config.options")
 require("config.keymaps")
+require("config.hl_groups")
 
 -- disable netrw
 vim.g.loaded_netrw = 1
@@ -23,12 +24,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazyOpts = {
-	defaults = {
-		lazy = true
-	},
-	install = {
-		colorscheme = { "nightfox" },
-	},
+	defaults = { lazy = true },
 	rtp = {
 		disabled_plugins = {
 			"gzip",
