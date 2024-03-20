@@ -5,6 +5,7 @@ opt.tabstop = 2 -- number of spaces for a tab character
 opt.shiftwidth = 2 -- number of spaces for each level of indentation
 opt.softtabstop = 2 -- number of spaces for tab in insert mode
 opt.expandtab = true -- convert tabs to spaces
+opt.autoindent = true -- autoindentation
 opt.smartindent = true -- autoindentation
 opt.wrap = false -- prevent long lines from wrapping (use :set wrap to set this to true. Can be useful in markdown files and such)
 
@@ -29,7 +30,7 @@ opt.swapfile = false -- disable swap files
 opt.undofile = true -- create files containing the history of all changes to a file to allow for undoing even after reopening vim
 opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.splitright = true -- split new horizontal windows to the right
-opt.splitbelow = true -- split new vertical windows to below the current window 
+opt.splitbelow = true -- split new vertical windows to below the current window
 opt.mouse:append("a") -- allow using the mouse in (a)ll modes
 opt.history = 50 -- command history length
 opt.scrolloff = 15

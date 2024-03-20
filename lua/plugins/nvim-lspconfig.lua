@@ -20,6 +20,7 @@ return {
       keymap.set("n", "gO", ":Telescope lsp_outgoing_calls<CR>", opts) -- show outgoing calls
       keymap.set("n", "gi", ":Telescope lsp_implementations<CR>", opts) -- show lsp implementations
       keymap.set("n", "gt", ":Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+      keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- jump to next diagnostic in buffer
       keymap.set("n", "<leader>D", ":Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
       keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename

@@ -34,7 +34,7 @@ return {
 
     cmp.setup({
       completion = {
-        completeopt = 'menu,menuone,noinsert'
+        completeopt = "menu,menuone,noinsert,noselect"
       },
       snippet = { -- configure nvim-cmp to use luasnip for expanding snippets
         expand = function(args)
@@ -46,9 +46,11 @@ return {
         ["<C-k>"] = cmp.mapping.scroll_docs(-1),
         ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
         ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<C-m>"] = cmp.mapping.complete(),
+        ["<C-y>"] = cmp.mapping.open_docs(),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
-            cmp.confirm()
+            cmp.confirm({ select = true })
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before and has_words_before() then
@@ -56,7 +58,7 @@ return {
           else
             fallback()
           end
-        end, { "i", "s" }), -- input and snippet modes?
+        end, { "i", "s" }), -- input and snippet modes
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
@@ -65,7 +67,7 @@ return {
         { name = "path" },     -- file system paths
         { name = "buffer" }    -- current buffer
       }),
-      -- configure lspkind for vs-code like pictograms in completion menu
+      -- configure lspkind for vscode-like pictograms in completion menu
       formatting = {
         format = lspkind.cmp_format({ maxwidth = 50, ellipsis_char = "..." }),
       },

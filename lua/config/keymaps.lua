@@ -1,6 +1,6 @@
 local mapKey = require("utils.mapKey")
 
--- window managment
+-- window management
 mapKey("<C-j>", "<C-w>j")
 mapKey("<C-k>", "<C-w>k")
 mapKey("<C-h>", "<C-w>h")
@@ -26,9 +26,6 @@ mapKey(">", ">gv", "v")
 mapKey("<", "<<")
 mapKey(">", ">>")
 
--- format
-mapKey("<leader>fm", ":lua vim.lsp.buf.format()<CR>")
-
 -- no highlight
 mapKey("<leader>nh", ":noh<CR>")
 
@@ -44,4 +41,3 @@ mapKey("<C-i>", "<C-o>")
 mapKey("H", ":BufferLineCyclePrev<CR>")
 mapKey("L", ":BufferLineCycleNext<CR>")
 mapKey("<leader>q", ":bp<bar>sp<bar>bn<bar>bd<CR>")
-
