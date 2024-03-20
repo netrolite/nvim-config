@@ -1,5 +1,3 @@
-local mapKey = require("utils.mapKey");
-
 return {
 	"williamboman/mason.nvim",
 	cmd = "Mason",

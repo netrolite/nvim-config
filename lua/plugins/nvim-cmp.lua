@@ -7,6 +7,7 @@ return {
     "hrsh7th/cmp-buffer",           -- completion source for text in buffer
     "hrsh7th/cmp-path",             -- completion source for file system paths
     "hrsh7th/cmp-nvim-lsp",         -- completion source for lsp
+    "hrsh7th/cmp-cmdline",         -- completion source for lsp
     "saadparwaiz1/cmp_luasnip",     -- completion source for snippets
     "L3MON4D3/LuaSnip",             -- snippet engine
     "rafamadriz/friendly-snippets", -- set of useful snippets

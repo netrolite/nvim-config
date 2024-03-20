@@ -18,7 +18,7 @@ opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true -- allow all colors (aka enable 24-bit colors)
 opt.signcolumn = "yes" -- a column separate from line numbers that shows warnings errors, etc...
-opt.scrolloff = 10
+-- opt.cmdheight = 5
 
 -- completion menu settings (now specified in nvim-cmp.lua)
 -- opt.completeopt = "menu,menuone"
