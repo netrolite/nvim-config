@@ -31,5 +31,6 @@ return {
 		{ "<leader>fw", ":Telescope live_grep<CR>" },
 		{ "<leader>fb", ":Telescope buffers<CR>" },
 		{ "<leader>fz", ":Telescope current_buffer_fuzzy_find<CR>" },
+		{ "<leader>fr", ":Telescope oldfiles<CR>" },
 	},
 }
