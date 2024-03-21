@@ -9,11 +9,11 @@ local config = function()
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "branch" },
-			lualine_c = { "location", "searchcount",  "selectioncount" },
+			lualine_c = { "location", "searchcount", "selectioncount" },
 			lualine_x = { "filetype" },
 			lualine_y = { "fileformat" },
 			lualine_z = { "progress" },
-		}
+		},
 	})
 end
 
