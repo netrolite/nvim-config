@@ -6,7 +6,7 @@ opt.shiftwidth = 2 -- number of spaces for each level of indentation
 opt.softtabstop = 2 -- number of spaces for tab in insert mode
 opt.expandtab = true -- convert tabs to spaces
 opt.autoindent = true -- autoindentation
-opt.smartindent = true -- autoindentation
+opt.smartindent = true -- also autoindentation
 opt.wrap = false -- prevent long lines from wrapping (use :set wrap to set this to true. Can be useful in markdown files and such)
 
 -- search

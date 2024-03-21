@@ -9,14 +9,14 @@ vim.g.loaded_netrwPlugin = 1
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then -- if lazy.nvim is not installed then install it
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 
 -- rpt = runtime path
@@ -25,9 +25,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazyOpts = {
 	defaults = { lazy = true },
-  install = {
-    colorscheme = { "onedark" }
-  },
+	install = {
+		colorscheme = { "onedark" },
+	},
 	rtp = {
 		disabled_plugins = {
 			"gzip",
@@ -37,10 +37,9 @@ local lazyOpts = {
 			"tarPlugin",
 			"tohtml",
 			"tutor",
-			"zipPlugin"
-		}
+			"zipPlugin",
+		},
 	},
 }
-
 
 require("lazy").setup("plugins", lazyOpts) -- plugins is the directory with all the plugin configs
