@@ -8,9 +8,9 @@ local config = function()
 		},
 		sections = {
 			lualine_a = { "mode" },
-			lualine_b = { "branch" },
-			lualine_c = { "location", "searchcount", "selectioncount" },
-			lualine_x = { "filetype" },
+			lualine_b = { "branch", "diff" },
+			lualine_c = { "diagnostics", { "filename", path = 1, file_status = true } }, -- path = 1 is path relative to project root
+			lualine_x = { "filetype", "filesize" },
 			lualine_y = { "fileformat" },
 			lualine_z = { "progress" },
 		},
