@@ -39,12 +39,14 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
+				["<C-i>"] = cmp.mapping(function()
+					require("lsp_signature").toggle_float_win()
+				end),
 				["<C-j>"] = cmp.mapping.scroll_docs(1),
 				["<C-k>"] = cmp.mapping.scroll_docs(-1),
 				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
 				["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 				["<C-m>"] = cmp.mapping.complete(),
-				["<C-y>"] = cmp.mapping.open_docs(),
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.confirm({ select = true })
