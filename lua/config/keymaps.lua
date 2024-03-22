@@ -1,4 +1,4 @@
-local mapKey = require("utils.mapKey")
+local mapKey = require("utils.map_key")
 
 -- window management
 mapKey("<C-j>", "<C-w>j")
