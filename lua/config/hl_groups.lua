@@ -12,18 +12,9 @@ local function mod_hl(hl_group_name, hl_group_opts)
 	hl_groups_count = hl_groups_count + 1
 end
 
-mod_hl("WinSeparator", { fg = "#2D2D2D" })
-
 mod_hl("NvimTreeIndentMarker", { fg = "#3F3F3F" })
-mod_hl("NvimTreeCursorLine", { bg = "#232323" })
+mod_hl("NvimTreeCursorLine", { bg = "#303540" })
 mod_hl("NvimTreeCursorLineNr", { fg = "#54546D" }) -- nvim tree line number
-
-mod_hl("NormalFloat", { bg = "#353e49" }) -- diagnostics float & rename float input field
-mod_hl("FloatBorder", { fg = "#6b695d", bg = "#212326" }) -- rename float & other floats also
-
-mod_hl("LspSignatureActiveParameter", { bg = "#366080" })
-
-mod_hl("TelescopeBorder", { bg = "#212326", fg = "#6b695d" })
-mod_hl("TelescopeNormal", { bg = "#212326" })
-mod_hl("TelescopeSelection", { bg = "#353e49" })
-mod_hl("TelescopeSelectionCaret", { fg = "#4a6d9f" })
+mod_hl("NvimTreeOffsetBackground", { bg = "#21252b" }) -- nvim tree line number
+mod_hl("NvimTreeWinSeparator", { fg = "#282c34" })
+mod_hl("BufferLineOffsetSeparator", { bg = "#21252b", fg = "#21252b" })

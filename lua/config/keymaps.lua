@@ -21,8 +21,8 @@ mapKey("<leader>lz", ":Lazy<CR>")
 mapKey("<C-s>", ":w<CR>")
 
 -- indentation
-mapKey("<", "<gv", "v")
-mapKey(">", ">gv", "v")
+mapKey("<", "<gv", { mode = "v" })
+mapKey(">", ">gv", { mode = "v" })
 mapKey("<", "<<")
 mapKey(">", ">>")
 

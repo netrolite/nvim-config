@@ -1,8 +1,8 @@
 return {
-	"rebelot/kanagawa.nvim",
+	"navarasu/onedark.nvim",
 	lazy = false,
 	priority = 999,
 	config = function() -- called every time plugin loads
-		vim.cmd("colorscheme kanagawa")
+		vim.cmd("colorscheme onedark")
 	end,
 }

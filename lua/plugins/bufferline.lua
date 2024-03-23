@@ -14,7 +14,7 @@ return {
 				offsets = {
 					{
 						filetype = "NvimTree",
-						highlight = "Directory",
+						highlight = "NvimTreeOffsetBackground",
 						separator = "|",
 					},
 				},

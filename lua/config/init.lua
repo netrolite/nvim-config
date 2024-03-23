@@ -25,9 +25,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazyOpts = {
 	defaults = { lazy = true },
-	install = {
-		colorscheme = { "kanagawa" },
-	},
 	rtp = {
 		disabled_plugins = {
 			"gzip",

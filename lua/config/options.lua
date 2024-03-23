@@ -21,9 +21,6 @@ opt.termguicolors = true -- allow all colors (aka enable 24-bit colors)
 opt.signcolumn = "yes" -- a column separate from line numbers that shows warnings errors, etc...
 -- opt.cmdheight = 5
 
--- completion menu settings (now specified in nvim-cmp.lua)
--- opt.completeopt = "menu,menuone"
-
 -- behavior
 opt.errorbells = false -- disable error sounds
 opt.swapfile = false -- disable swap files
