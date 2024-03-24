@@ -31,7 +31,7 @@ return {
 
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,noinsert,noselect",
+				completeopt = "menu,menuone",
 			},
 			snippet = { -- configure nvim-cmp to use luasnip for expanding snippets
 				expand = function(args)
@@ -40,6 +40,7 @@ return {
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-i>"] = cmp.mapping(function()
+					print("hello")
 					require("lsp_signature").toggle_float_win()
 				end),
 				["<C-j>"] = cmp.mapping.scroll_docs(1),
@@ -62,8 +63,8 @@ return {
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- lsp
-				{ name = "luasnip" }, -- snippets
 				{ name = "path" }, -- file system paths
+				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- current buffer
 			}),
 			-- configure lspkind for vscode-like pictograms in completion menu

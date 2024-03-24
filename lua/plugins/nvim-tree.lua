@@ -15,7 +15,7 @@ return {
 			highlight_bookmarks = "name",
 			indent_markers = {
 				enable = true,
-				inline_arrows = false,
+				inline_arrows = true,
 			},
 		},
 		diagnostics = {
