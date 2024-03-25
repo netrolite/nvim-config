@@ -27,6 +27,7 @@ return {
 				graphql = { "prettierd" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				java = { "google-java-format" },
 				["*"] = { "codespell" }, -- run on all filetypes
 			},
 			format_on_save = {

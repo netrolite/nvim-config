@@ -5,10 +5,10 @@ return {
 	event = "VeryLazy",
 	config = function()
 		require("lsp_signature").setup({
-			hint_prefix = "🥸 ",
+			hint_enable = false,
 		})
 
-		map_key("<C-i>", function()
+		map_key("<C-y>", function()
 			require("lsp_signature").toggle_float_win()
 		end)
 	end,

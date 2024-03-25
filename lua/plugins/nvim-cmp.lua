@@ -1,5 +1,3 @@
-local has_words_before = require("utils.has_words_before").has_words_before
-
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
@@ -39,7 +37,7 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<C-i>"] = cmp.mapping(function()
+				["<C-y>"] = cmp.mapping(function()
 					print("hello")
 					require("lsp_signature").toggle_float_win()
 				end),
@@ -47,14 +45,12 @@ return {
 				["<C-k>"] = cmp.mapping.scroll_docs(-1),
 				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
 				["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-				["<C-m>"] = cmp.mapping.complete(),
+				["<C-f>"] = cmp.mapping.complete({}),
 				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.confirm({ select = true })
-					elseif luasnip.expand_or_jumpable() then
+					if luasnip.expand_or_jumpable() then
 						luasnip.expand_or_jump()
-					elseif has_words_before and has_words_before() then
-						cmp.complete()
+					elseif cmp.visible() then
+						cmp.confirm({ select = true })
 					else
 						fallback()
 					end

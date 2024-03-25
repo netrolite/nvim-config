@@ -13,6 +13,7 @@ return {
 		renderer = {
 			root_folder_label = ":t",
 			highlight_bookmarks = "name",
+			group_empty = true,
 			indent_markers = {
 				enable = true,
 				inline_arrows = true,
@@ -26,6 +27,9 @@ return {
 				".env*",
 				"node_modules",
 			},
+		},
+		trash = {
+			cmd = "trash",
 		},
 	},
 	keys = {
