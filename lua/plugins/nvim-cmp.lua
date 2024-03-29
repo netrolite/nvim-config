@@ -5,7 +5,8 @@ return {
 		"hrsh7th/cmp-buffer", -- completion source for text in buffer
 		"hrsh7th/cmp-path", -- completion source for file system paths
 		"hrsh7th/cmp-nvim-lsp", -- completion source for lsp
-		"hrsh7th/cmp-cmdline", -- completion source for command line "saadparwaiz1/cmp_luasnip", -- completion source for snippets
+		"hrsh7th/cmp-cmdline", -- completion source for command line
+		"saadparwaiz1/cmp_luasnip", -- completion source for snippets
 		"L3MON4D3/LuaSnip", -- snippet engine
 		"rafamadriz/friendly-snippets", -- set of useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
@@ -34,7 +35,6 @@ return {
 				["<C-space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
 				["<C-y>"] = cmp.mapping(function()
-					print("hello")
 					require("lsp_signature").toggle_float_win()
 				end),
 				["<Tab>"] = cmp.mapping(function(fallback)
