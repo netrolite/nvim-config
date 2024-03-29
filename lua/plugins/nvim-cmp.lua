@@ -5,27 +5,17 @@ return {
 		"hrsh7th/cmp-buffer", -- completion source for text in buffer
 		"hrsh7th/cmp-path", -- completion source for file system paths
 		"hrsh7th/cmp-nvim-lsp", -- completion source for lsp
-		"hrsh7th/cmp-cmdline", -- completion source for lsp
-		"saadparwaiz1/cmp_luasnip", -- completion source for snippets
+		"hrsh7th/cmp-cmdline", -- completion source for command line "saadparwaiz1/cmp_luasnip", -- completion source for snippets
 		"L3MON4D3/LuaSnip", -- snippet engine
 		"rafamadriz/friendly-snippets", -- set of useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
 	},
 	config = function()
 		local cmp = require("cmp")
-		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
-
-		-- insert parenthesis when autocompleting a function
-		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
-		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-		-- you can also specify a custom directory to load them from a non-standard location
-		-- see https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#add-snippets
 		require("luasnip.loaders.from_vscode").lazy_load()
-		-- load snipmate snippets (from ~/.config/nvim/snippets)
-		require("luasnip.loaders.from_snipmate").lazy_load()
+		require("luasnip.loaders.from_snipmate").lazy_load({ paths = "./snippets" }) -- load snippets from ~/.config/nvim/snippets
 
 		cmp.setup({
 			completion = {
@@ -37,26 +27,35 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
+				["<C-f>"] = cmp.mapping.scroll_docs(2),
+				["<C-d>"] = cmp.mapping.scroll_docs(-2),
+				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+				["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+				["<C-space>"] = cmp.mapping.complete(),
+				["<C-e>"] = cmp.mapping.abort(),
 				["<C-y>"] = cmp.mapping(function()
 					print("hello")
 					require("lsp_signature").toggle_float_win()
 				end),
-				["<C-j>"] = cmp.mapping.scroll_docs(1),
-				["<C-k>"] = cmp.mapping.scroll_docs(-1),
-				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-				["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-				["<C-f>"] = cmp.mapping.complete({}),
 				["<Tab>"] = cmp.mapping(function(fallback)
-					if luasnip.expand_or_jumpable() then
-						luasnip.expand_or_jump()
-					elseif cmp.visible() then
-						cmp.confirm({ select = true })
+					if cmp.visible() then
+						cmp.confirm()
 					else
 						fallback()
 					end
-				end, { "i", "s" }), -- input and snippet modes
-			}),
-			-- sources for autocompletion
+				end, { "i", "s" }),
+				["<C-j>"] = cmp.mapping(function()
+					luasnip.jump(1)
+				end, { "i", "s" }),
+				["<C-k>"] = cmp.mapping(function()
+					luasnip.jump(-1)
+				end),
+				["<C-l>"] = cmp.mapping(function()
+					if luasnip.choice_active() then
+						luasnip.change_choice(1)
+					end
+				end),
+			}, { "i", "s" }),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- lsp
 				{ name = "path" }, -- file system paths
