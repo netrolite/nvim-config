@@ -11,13 +11,6 @@ return {
 		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-		local opts = {
-			capabilities = capabilities,
-			on_attach = on_attach,
-		}
-
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
@@ -25,43 +18,39 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		-- used to enable autocompletion (assign to every lsp server config)
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local opts = {
+			capabilities = capabilities,
+			on_attach = on_attach,
+		}
+
+		lspconfig["rust_analyzer"].setup(opts)
+		lspconfig["marksman"].setup(opts)
+		lspconfig["prismals"].setup(opts)
+		lspconfig["pyright"].setup(opts)
 		lspconfig["html"].setup(opts)
 		lspconfig["tsserver"].setup(opts)
 		lspconfig["cssls"].setup(opts)
 		lspconfig["tailwindcss"].setup(opts)
+		lspconfig["taplo"].setup(opts)
+		lspconfig["css_variables"].setup(opts)
+		lspconfig["cssmodules_ls"].setup(opts)
 
-		lspconfig["svelte"].setup({
-			capabilities = capabilities,
-			on_attach = function(client, bufnr)
-				on_attach(client, bufnr)
-
-				vim.api.nvim_create_autocmd("BufWritePost", {
-					pattern = { "*.js", "*.ts" },
-					callback = function(ctx)
-						if client.name == "svelte" then
-							client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-						end
-					end,
-				})
-			end,
-		})
-
-		lspconfig["prismals"].setup(opts)
+		-- requires per-project installation and configuration of typescript-svelte-plugin.
+		-- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin#usage
+		lspconfig["svelte"].setup(opts)
 
 		lspconfig["graphql"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 		})
-
 		lspconfig["emmet_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 		})
-
-		lspconfig["pyright"].setup(opts)
-
 		lspconfig["lua_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -80,6 +69,17 @@ return {
 					},
 				},
 			},
+		})
+
+		local vscodeLsCapabilities = vim.lsp.protocol.make_client_capabilities()
+		vscodeLsCapabilities.textDocument.completion.completionItem.snippetSupport = true
+		lspconfig["cssls"].setup({
+			on_attach = on_attach,
+			capabilities = vscodeLsCapabilities,
+		})
+		lspconfig["jsonls"].setup({
+			capabilities = vscodeLsCapabilities,
+			on_attach = on_attach,
 		})
 	end,
 }
