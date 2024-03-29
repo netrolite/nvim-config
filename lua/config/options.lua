@@ -5,8 +5,6 @@ opt.tabstop = 2 -- number of spaces for a tab character
 opt.shiftwidth = 2 -- number of spaces for each level of indentation
 opt.softtabstop = 2 -- number of spaces for tab in insert mode
 opt.expandtab = true -- convert tabs to spaces
-opt.autoindent = true -- autoindentation
-opt.smartindent = true -- also autoindentation
 opt.wrap = false -- prevent long lines from wrapping (use :set wrap to set this to true. Can be useful in markdown files and such)
 
 -- search
@@ -19,6 +17,7 @@ opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true -- allow all colors (aka enable 24-bit colors)
 opt.signcolumn = "yes" -- a column separate from line numbers that shows warnings errors, etc...
+opt.cursorline = true
 -- opt.cmdheight = 5
 
 -- behavior
