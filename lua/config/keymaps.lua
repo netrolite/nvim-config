@@ -7,8 +7,8 @@ mapKey("<C-h>", "<C-w>h")
 mapKey("<C-l>", "<C-w>l")
 mapKey("<leader>=", ":resize +2<CR>")
 mapKey("<leader>-", ":resize -2<CR>")
-mapKey("<leader>]", ":vertical resize -2<CR>")
-mapKey("<leader>[", ":vertical resize +2<CR>")
+mapKey("<leader>[", ":vertical resize -2<CR>")
+mapKey("<leader>]", ":vertical resize +2<CR>")
 
 -- splits
 mapKey("<leader>sh", ":split<CR>")

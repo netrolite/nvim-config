@@ -15,6 +15,7 @@ end
 mod_hl("NvimTreeIndentMarker", { fg = "#3F3F3F" })
 mod_hl("NvimTreeCursorLine", { bg = "#303540" })
 mod_hl("NvimTreeCursorLineNr", { fg = "#54546D" }) -- nvim tree line number
-mod_hl("NvimTreeOffsetBackground", { bg = "#21252b" }) -- nvim tree line number
+mod_hl("NvimTreeOffsetBackground", { bg = "#21252b" })
 mod_hl("NvimTreeWinSeparator", { fg = "#282c34" })
 mod_hl("BufferLineOffsetSeparator", { bg = "#21252b", fg = "#21252b" })
+mod_hl("CursorLine", { bg = "#21252b" })
