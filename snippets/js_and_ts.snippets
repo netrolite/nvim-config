@@ -1,0 +1,30 @@
+snippet fn function
+	function ${1:name}($2) {
+		$0
+	}
+
+snippet afn async function
+	async function ${1:name}($2) {
+		$0
+	}
+
+snippet iife IIFE
+	;(() => {
+		$0
+	})();
+
+snippet aiife async IIFE
+	;(async () => {
+		$0
+	})();
+
+snippet sact nextjs server action
+	"use server";
+
+	export default async function ${1:name}($2) {
+		$0
+	}
+
+snippet log console.log
+	console.log($1);
+	$0
