@@ -2,6 +2,7 @@ require("config.globals")
 require("config.options")
 require("config.keymaps")
 require("config.hl_groups")
+require("config.autocmds")
 
 -- disable netrw
 vim.g.loaded_netrw = 1
