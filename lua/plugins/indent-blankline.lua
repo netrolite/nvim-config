@@ -14,7 +14,7 @@ return {
 
 		require("ibl").setup({
 			indent = { highlight = highlight },
-			scope = { enabled = false },
+			scope = { show_start = false },
 		})
 	end,
 }
