@@ -11,3 +11,15 @@ snippet rfcp react functional component with props
 
 		)
 	}
+
+snippet srfcp nextjs component with context (like props)
+	type Context = {
+		params: { $2 }
+	}
+
+	export default async function ${1:name}({ params: { $3 } }: Context) {
+		$0
+		return (
+			
+		)
+	}
