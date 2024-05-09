@@ -34,6 +34,7 @@ return {
 		"hrsh7th/cmp-path", -- completion source for file system paths
 		"hrsh7th/cmp-nvim-lsp", -- completion source for lsp
 		"hrsh7th/cmp-cmdline", -- completion source for command line
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"lukas-reineke/cmp-under-comparator", -- moves completion items starting with underscores to the end of the list
 		"saadparwaiz1/cmp_luasnip", -- completion source for snippets
 		"L3MON4D3/LuaSnip", -- snippet engine
@@ -63,7 +64,7 @@ return {
 				["<C-space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
 				["<C-y>"] = cmp.mapping(function()
-					require("lsp_signature").toggle_float_win()
+					vim.lsp.buf.signature_help()
 				end),
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
