@@ -36,6 +36,7 @@ return {
 		lspconfig["taplo"].setup(opts)
 		lspconfig["css_variables"].setup(opts)
 		lspconfig["cssmodules_ls"].setup(opts)
+		lspconfig["gopls"].setup(opts)
 
 		-- requires per-project installation and configuration of typescript-svelte-plugin.
 		-- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin#usage

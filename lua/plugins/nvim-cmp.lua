@@ -51,6 +51,7 @@ return {
 			completion = {
 				completeopt = "menu,menuone",
 			},
+			preselect = cmp.PreselectMode.None,
 			snippet = { -- configure nvim-cmp to use luasnip for expanding snippets
 				expand = function(args)
 					luasnip.lsp_expand(args.body)

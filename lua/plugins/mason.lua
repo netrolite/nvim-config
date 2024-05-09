@@ -5,6 +5,10 @@ return {
 		{ "<leader>M", ":Mason<CR>" },
 	},
 	opts = {
+		ensure_installed = {
+			"gopls",
+			"gofumpt",
+		},
 		ui = {
 			icons = {
 				package_installed = "✓",
