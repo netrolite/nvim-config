@@ -44,8 +44,12 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		require("luasnip.loaders.from_vscode").lazy_load()
-		require("luasnip.loaders.from_snipmate").lazy_load({ paths = "./snippets" }) -- load snippets from ~/.config/nvim/snippets
+
+		-- load snippets
+		luasnip.filetype_extend("javascriptreact", { "html" })
+		luasnip.filetype_extend("typescriptreact", { "html" })
+		require("luasnip/loaders/from_vscode").lazy_load()
+		require("luasnip/loaders/from_snipmate").lazy_load({ paths = "./snippets" }) -- load snippets from ~/.config/nvim/snippets
 
 		cmp.setup({
 			completion = {
@@ -74,15 +78,15 @@ return {
 						fallback()
 					end
 				end, { "i", "s" }),
-				["<C-h>"] = cmp.mapping(function()
-					luasnip.expand()
-				end, { "i" }),
 				["<C-j>"] = cmp.mapping(function()
 					luasnip.jump(1)
 				end, { "i", "s" }),
 				["<C-k>"] = cmp.mapping(function()
 					luasnip.jump(-1)
 				end),
+				["<C-h>"] = cmp.mapping(function()
+					luasnip.expand()
+				end, { "i" }),
 				["<C-l>"] = cmp.mapping(function()
 					if luasnip.choice_active() then
 						luasnip.change_choice(1)
