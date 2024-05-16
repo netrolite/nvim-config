@@ -15,7 +15,22 @@ return {
 			},
 			pickers = {
 				find_files = {
-					hidden = true, -- include dotfiles
+					find_command = {
+						"rg", -- ripgrep
+						"--no-ignore", -- disable exclusion of files/directories based on .gitignore
+						"--files", -- dunno
+						"--hidden", -- search hidden files/directories (ones that begin with a dot)
+						"-g", -- include/exclude a directory. Directories get included by default, but a ! in front exludes them
+						"!.git/",
+						"-g",
+						"!node_modules",
+						"-g",
+						"!tmp/",
+						"-g",
+						"!build/",
+						"-g",
+						"!.next/",
+					},
 				},
 			},
 		})
@@ -24,8 +39,8 @@ return {
 	branch = "0.1.x",
 	event = { "BufReadPre", "BufNewFile" },
 	keys = {
-		{ "<leader>ff", ":Telescope find_files<CR>" },
 		{ "<leader>fa", ":Telescope<CR>" },
+		{ "<leader>ff", ":Telescope find_files<CR>" },
 		{ "<leader>fk", ":Telescope keymaps<CR>" },
 		{ "<leader>fh", ":Telescope help_tags<CR>" },
 		{ "<leader>fw", ":Telescope live_grep<CR>" },

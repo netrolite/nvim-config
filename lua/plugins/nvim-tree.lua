@@ -13,7 +13,7 @@ return {
 		renderer = {
 			root_folder_label = ":t",
 			highlight_bookmarks = "name",
-			group_empty = true,
+			group_empty = false,
 			indent_markers = {
 				enable = true,
 				inline_arrows = true,
