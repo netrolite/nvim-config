@@ -41,3 +41,5 @@ map("<C-i>", "<C-o>")
 map("H", ":BufferLineCyclePrev<CR>")
 map("L", ":BufferLineCycleNext<CR>")
 map("<leader>q", ":bp<bar>sp<bar>bn<bar>bd!<CR>")
+
+map("*", "*<C-o>")
