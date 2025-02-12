@@ -1,0 +1,70 @@
+{
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "function ${1:name}($2) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "function"
+  },
+  "async function": {
+    "prefix": "afn",
+    "body": [
+      "async function ${1:name}($2) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "async function"
+  },
+  "export": {
+    "prefix": "e",
+    "body": [
+      "export$0"
+    ],
+    "description": "export"
+  },
+  "export default": {
+    "prefix": "ed",
+    "body": [
+      "export default$0"
+    ],
+    "description": "export default"
+  },
+  "IIFE": {
+    "prefix": "iife",
+    "body": [
+      ";(() => {",
+      "\t$0",
+      "})();"
+    ],
+    "description": "IIFE"
+  },
+  "async IIFE": {
+    "prefix": "aiife",
+    "body": [
+      ";(async () => {",
+      "\t$0",
+      "})();"
+    ],
+    "description": "async IIFE"
+  },
+  "nextjs server action": {
+    "prefix": "sact",
+    "body": [
+      "\"use server\";",
+      "",
+      "export default async function ${1:name}($2) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "nextjs server action"
+  },
+  "console.log": {
+    "prefix": "lg",
+    "body": [
+      "console.log($0);"
+    ],
+    "description": "console.log"
+  }
+}

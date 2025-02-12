@@ -3,26 +3,32 @@ snippet fn function
 		$0
 	}
 
+
 snippet afn async function
 	async function ${1:name}($2) {
 		$0
 	}
 
+
 snippet e export
-	export $0
+	export$0
+
 
 snippet ed export default
-	export default $0
+	export default$0
+
 
 snippet iife IIFE
 	;(() => {
 		$0
 	})();
 
+
 snippet aiife async IIFE
 	;(async () => {
 		$0
 	})();
+
 
 snippet sact nextjs server action
 	"use server";
@@ -31,7 +37,8 @@ snippet sact nextjs server action
 		$0
 	}
 
+
 snippet lg console.log
-	console.log($1);
-	$0
+	console.log($0);
+
 

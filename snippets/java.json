@@ -1,0 +1,71 @@
+{
+  "public method": {
+    "prefix": "pum",
+    "body": [
+      "public ${1:void} ${2:name}($3) {",
+      "$0",
+      "}"
+    ],
+    "description": "public method"
+  },
+  "private method": {
+    "prefix": "prim",
+    "body": [
+      "private ${1:void} ${2:name}($3) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "private method"
+  },
+  "protected method": {
+    "prefix": "prom",
+    "body": [
+      "protected ${1:void} ${2:name}($3) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "protected method"
+  },
+  "public variable": {
+    "prefix": "puv",
+    "body": [
+      "public ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "public variable"
+  },
+  "public static variable": {
+    "prefix": "pusv",
+    "body": [
+      "public static ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "public static variable"
+  },
+  "private variable": {
+    "prefix": "priv",
+    "body": [
+      "private ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "private variable"
+  },
+  "private static variable": {
+    "prefix": "prisv",
+    "body": [
+      "private static ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "private static variable"
+  },
+  "protected variable": {
+    "prefix": "prov",
+    "body": [
+      "protected ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "protected variable"
+  },
+  "protected static variable": {
+    "prefix": "prosv",
+    "body": [
+      "protected static ${1:DataType} ${2:name} = $0;"
+    ],
+    "description": "protected static variable"
+  }
+}

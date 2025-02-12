@@ -1,0 +1,40 @@
+{
+  "react functional component": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${1:Name}() {",
+      "\t$0",
+      "\treturn (",
+      "\t\t",
+      "\t);",
+      "}"
+    ],
+    "description": "react functional component"
+  },
+  "className": {
+    "prefix": "cn",
+    "body": [
+      "className=$0"
+    ],
+    "description": "className"
+  },
+  "nextjs component": {
+    "prefix": "srfc",
+    "body": [
+      "export default async function ${1:name}() {",
+      "\t$0,",
+      "\treturn (",
+      "\t\t",
+      "\t);",
+      "}"
+    ],
+    "description": "nextjs component"
+  },
+  "useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1:state}, ${2:setState}] = useState($3);"
+    ],
+    "description": "useState"
+  }
+}

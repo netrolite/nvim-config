@@ -1,0 +1,35 @@
+{
+  "react functional component with props": {
+    "prefix": "rfcp",
+    "body": [
+      "type Props = {",
+      "\t$2",
+      "};",
+      "",
+      "export default function ${1:Name}({ $3 }: Props) {",
+      "\t$0",
+      "\treturn (",
+      "\t\t",
+      "\t);",
+      "}"
+    ],
+    "description": "react functional component with props"
+  },
+  "nextjs component with context (like props)": {
+    "prefix": "srfcp",
+    "body": [
+      "type Context = {",
+      "\tparams: { $2 }",
+      "};",
+      "",
+      "export default async function ${1:name}({ params: { $3 } }: Context) {",
+      "\t$0",
+      "\treturn (",
+      "\t\t",
+      "\t);",
+      "}"
+    ],
+    "description": "nextjs component with context (like props)"
+  }
+}
+

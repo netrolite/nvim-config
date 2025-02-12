@@ -1,0 +1,40 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./python.json"
+      },
+      {
+        "language": "lua",
+        "path": "./lua.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascriptreact.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
+      },
+      {
+        "language": "all",
+        "path": "./allFiletypes.json"
+      }
+    ]
+  },
+  "name": "my-snippets"
+}

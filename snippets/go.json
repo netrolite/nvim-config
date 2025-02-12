@@ -1,0 +1,65 @@
+{
+  "pt": {
+    "prefix": "pt",
+    "body": [
+      "fmt.Print($0)"
+    ],
+    "description": "fmt.Print()"
+  },
+  "ptln": {
+    "prefix": "ptln",
+    "body": [
+      "fmt.Println($0)"
+    ],
+    "description": "fmt.Println()"
+  },
+  "ptf": {
+    "prefix": "ptf",
+    "body": [
+      "fmt.Printf($0)"
+    ],
+    "description": "fmt.Printf()"
+  },
+  "spt": {
+    "prefix": "spt",
+    "body": [
+      "fmt.Sprint($0)"
+    ],
+    "description": "fmt.Sprint()"
+  },
+  "sptf": {
+    "prefix": "sptf",
+    "body": [
+      "fmt.Sprintf($0)"
+    ],
+    "description": "fmt.Sprinf()"
+  },
+  "sptln": {
+    "prefix": "sptln",
+    "body": [
+      "fmt.Sprintln($0)"
+    ],
+    "description": "fmt.Sprintln()"
+  },
+  "lg": {
+    "prefix": "lg",
+    "body": [
+      "log.Print($0)"
+    ],
+    "description": "log.Print()"
+  },
+  "lgf": {
+    "prefix": "lgf",
+    "body": [
+      "log.Printf($0)"
+    ],
+    "description": "log.Printf()"
+  },
+  "lgln": {
+    "prefix": "lgln",
+    "body": [
+      "log.Println($0)"
+    ],
+    "description": "log.Println()"
+  }
+}
