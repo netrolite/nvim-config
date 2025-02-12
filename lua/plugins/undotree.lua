@@ -1,7 +1,7 @@
 return {
-	"mbbill/undotree",
-	config = true,
-	keys = {
-		{ "<leader>U", ":UndotreeToggle<CR>" },
-	},
+  "mbbill/undotree",
+  opts = {},
+  keys = {
+    { "<leader>U", ":UndotreeToggle<CR>" },
+  },
 }

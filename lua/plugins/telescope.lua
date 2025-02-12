@@ -14,11 +14,11 @@ return {
     pickers = {
       find_files = {
         find_command = {
-          "rg",      -- ripgrep
+          "rg",          -- ripgrep
           "--no-ignore", -- disable exclusion of files/directories based on .gitignore
-          "--files", -- dunno
-          "--hidden", -- search hidden files/directories (ones that begin with a dot)
-          "-g",      -- include/exclude a directory. Directories get included by default, but a ! in front exludes them
+          "--files",     -- dunno
+          "--hidden",    -- search hidden files/directories (ones that begin with a dot)
+          "-g",          -- include/exclude a directory. Directories get included by default, but a ! in front exludes them
           "!.git/",
           "-g",
           "!node_modules",
@@ -34,7 +34,6 @@ return {
   },
   dependencies = { "nvim-lua/plenary.nvim" },
   branch = "0.1.x",
-  event = { "BufReadPre", "BufNewFile" },
   keys = {
     { "<leader>fa", ":Telescope<CR>" },
     { "<leader>ff", ":Telescope find_files<CR>" },
