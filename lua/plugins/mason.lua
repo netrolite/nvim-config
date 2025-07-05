@@ -11,7 +11,7 @@ return {
       "black",
       "cssmodules_ls",
       "html",
-      "json_ls",
+      "jsonls",
       "lua_ls",
       "ts_ls",
       "prisma_ls",

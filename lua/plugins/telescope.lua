@@ -10,6 +10,12 @@ return {
         "%.git/",
       },
       prompt_prefix = "",
+      mappings = {
+        n = {
+          ["q"] = require("telescope.actions").close,
+          ["<C-d>"] = require("telescope.actions").delete_buffer,
+        },
+      }
     },
     pickers = {
       find_files = {
@@ -37,6 +43,7 @@ return {
   keys = {
     { "<leader>fa", ":Telescope<CR>" },
     { "<leader>ff", ":Telescope find_files<CR>" },
+    { "<S-l>",      ":Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>" },
     { "<leader>fk", ":Telescope keymaps<CR>" },
     { "<leader>fh", ":Telescope help_tags<CR>" },
     { "<leader>fw", ":Telescope live_grep<CR>" },
