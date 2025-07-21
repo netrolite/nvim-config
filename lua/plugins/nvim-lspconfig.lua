@@ -24,7 +24,7 @@ return {
 
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = require('blink.cmp').get_lsp_capabilities()
-    local servers_with_default_options = { "rust_analyzer", "marksman", "prismals", "pylsp", "html", "ts_ls", "cssls",
+    local servers_with_default_options = { "rust_analyzer", "marksman", "prismals", "pyright", "html", "ts_ls", "cssls",
       "tailwindcss", "taplo", "css_variables", "cssmodules_ls", "gopls", "svelte" }
 
     for _, server in ipairs(servers_with_default_options) do

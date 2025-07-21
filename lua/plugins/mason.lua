@@ -5,6 +5,13 @@ return {
     { "<leader>M", ":Mason<CR>" },
   },
   opts = {
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗",
+      },
+    },
     ensure_installed = {
       "gopls",
       "gofumpt",
@@ -18,13 +25,6 @@ return {
       "tailwindcss",
       "pyright",
       "rust_analyzer"
-    },
-    ui = {
-      icons = {
-        package_installed = "✓",
-        package_pending = "➜",
-        package_uninstalled = "✗",
-      },
     },
   },
 }
