@@ -10,7 +10,7 @@ return {
         "%.git/",
       },
       prompt_prefix = "",
-      mappings = {
+      mappings = { -- comment out mappings when reinstalling config, then comment back in after telescope installs
         n = {
           ["q"] = require("telescope.actions").close,
           ["<C-d>"] = require("telescope.actions").delete_buffer,
