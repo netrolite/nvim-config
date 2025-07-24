@@ -4,14 +4,12 @@ return {
     automatic_installation = true,
     ensure_installed = {
       "gopls",
-      "gofumpt",
-      "black",
       "cssmodules_ls",
       "html",
       "jsonls",
       "lua_ls",
       "ts_ls",
-      "prisma_ls",
+      "prismals",
       "tailwindcss",
       "pyright",
       "rust_analyzer"
