@@ -21,8 +21,8 @@ return function(client, bufnr)
   keymap.set("n", "<leader>D", ":Telescope diagnostics bufnr=0<CR>", opts)                                   -- show  diagnostics for file
   keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)                                      -- see available code actions, in visual mode will apply to selection
   keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)                                                    -- smart rename
-  keymap.set("n", "[d", function() vim.diagnostic.jump({ count = 1, float = { source = true } }) end, opts)  -- jump to previous diagnostic in buffer
-  keymap.set("n", "]d", function() vim.diagnostic.jump({ count = -1, float = { source = true } }) end, opts) -- jump to next diagnostic in buffer
+  keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = { source = true } }) end, opts) -- jump to previous diagnostic in buffer
+  keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = { source = true } }) end, opts)  -- jump to next diagnostic in buffer
   keymap.set("n", "<leader>d", function() vim.diagnostic.open_float({ source = true }) end, opts)            -- jump to next diagnostic in buffer
   keymap.set("n", "K", vim.lsp.buf.hover, opts)                                                              -- show documentation for what is under cursor
   keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)                                                     -- mapping to restart lsp if necessary
