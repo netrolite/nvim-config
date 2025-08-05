@@ -7,7 +7,7 @@ return {
         prompt_position = "top",
       },
       file_ignore_patterns = {
-        "%.git/",
+        ".git", ".next", "node_modules", "target"
       },
       prompt_prefix = "",
       mappings = { -- comment out mappings when reinstalling config, then comment back in after telescope installs
@@ -23,17 +23,7 @@ return {
           "rg",          -- ripgrep
           "--no-ignore", -- disable exclusion of files/directories based on .gitignore
           "--files",     -- dunno
-          "--hidden",    -- search hidden files/directories (ones that begin with a dot)
-          "-g",          -- include/exclude a directory. Directories get included by default, but a ! in front exludes them
-          "!.git/",
-          "-g",
-          "!node_modules",
-          "-g",
-          "!tmp/",
-          "-g",
-          "!build/",
-          "-g",
-          "!.next/",
+          "--hidden"     -- search hidden files/directories (ones that begin with a dot)
         },
       },
     },
