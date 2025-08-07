@@ -25,7 +25,6 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = require('blink.cmp').get_lsp_capabilities()
     local servers_with_default_options = {
-      "rust_analyzer",
       "marksman",
       "markdown_oxide",
       "prismals",
@@ -68,6 +67,17 @@ return {
               [vim.fn.stdpath("config") .. "/lua"] = true,
             },
           },
+        },
+      },
+    })
+    lspconfig["rust_analyzer"].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        ["rust-analyzer"] = {
+          check = {
+            command = "clippy"
+          }
         },
       },
     })
