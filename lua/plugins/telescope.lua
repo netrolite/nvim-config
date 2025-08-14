@@ -31,14 +31,6 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   branch = "0.1.x",
   keys = {
-    { "<leader>fa", ":Telescope<CR>" },
-    { "<leader>ff", ":Telescope find_files<CR>" },
-    { "<S-l>",      ":Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>" },
-    { "<leader>fk", ":Telescope keymaps<CR>" },
-    { "<leader>fh", ":Telescope help_tags<CR>" },
-    { "<leader>fw", ":Telescope live_grep<CR>" },
-    { "<leader>fb", ":Telescope buffers<CR>" },
-    { "<leader>fz", ":Telescope current_buffer_fuzzy_find<CR>" },
-    { "<leader>fr", ":Telescope oldfiles<CR>" },
+    { "gd", ":Telescope lsp_definitions<CR>", { nowait = true } },
   },
 }

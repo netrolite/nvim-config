@@ -11,14 +11,7 @@ return function(client, bufnr)
   local keymap = vim.keymap
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
-  keymap.set("n", "gr", ":Telescope lsp_references<CR>", opts)                                               -- show definition, references
-  keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", opts)                                              -- show lsp definitions
   keymap.set("n", "gD", vim.lsp.buf.declaration, opts)                                                       -- go to declaration
-  keymap.set("n", "gI", ":Telescope lsp_incoming_calls<CR>", opts)                                           -- show incoming calls
-  keymap.set("n", "gO", ":Telescope lsp_outgoing_calls<CR>", opts)                                           -- show outgoing calls
-  keymap.set("n", "gi", ":Telescope lsp_implementations<CR>", opts)                                          -- show lsp implementations
-  keymap.set("n", "gt", ":Telescope lsp_type_definitions<CR>", opts)                                         -- show lsp type definitions
-  keymap.set("n", "<leader>D", ":Telescope diagnostics bufnr=0<CR>", opts)                                   -- show  diagnostics for file
   keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)                                      -- see available code actions, in visual mode will apply to selection
   keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)                                                    -- smart rename
   keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = { source = true } }) end, opts) -- jump to previous diagnostic in buffer
