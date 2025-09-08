@@ -37,7 +37,8 @@ return {
       "css_variables",
       "cssmodules_ls",
       "gopls",
-      "svelte"
+      "svelte",
+      "clangd"
     }
 
     for _, server in ipairs(servers_with_default_options) do
