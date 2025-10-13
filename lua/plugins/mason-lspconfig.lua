@@ -17,7 +17,7 @@ return {
       "prismals",
       "tailwindcss",
       "pyright",
-      "rust_analyzer"
+      "rust_analyzer",
     },
   },
   event = "BufReadPre",
