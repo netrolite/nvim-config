@@ -8,8 +8,6 @@ return {
     "saghen/blink.cmp"
   },
   config = function()
-    local lspconfig = require("lspconfig")
-
     -- Change the Diagnostic symbols in the sign column (gutter)
     vim.diagnostic.config({
       signs = {
@@ -38,23 +36,19 @@ return {
       "cssmodules_ls",
       "gopls",
       "svelte",
-      "clangd"
+      "clangd",
+      "graphql",
+      "emmet_ls"
     }
 
     for _, server in ipairs(servers_with_default_options) do
-      lspconfig[server].setup({ capabilities = capabilities, on_attach = on_attach })
+      vim.lsp.config(server, { capabilities = capabilities, on_attach = on_attach })
+      vim.lsp.enable(server)
     end
 
-    lspconfig["graphql"].setup({
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
-      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-    })
-    lspconfig["emmet_ls"].setup({
-      capabilities = capabilities,
-      filetypes = { "css", "sass", "scss", "less" },
-    })
-    lspconfig["lua_ls"].setup({
-      capabilities = capabilities,
+      on_attach = on_attach,
       settings = { -- custom settings for lua
         Lua = {
           -- make the language server recognize "vim" global
@@ -71,7 +65,9 @@ return {
         },
       },
     })
-    lspconfig["rust_analyzer"].setup({
+    vim.lsp.enable("lua_ls")
+
+    vim.lsp.config("rust_analyzer", {
       on_attach = on_attach,
       capabilities = capabilities,
       settings = {
@@ -82,14 +78,20 @@ return {
         },
       },
     })
+    vim.lsp.enable("rust_analyzer")
 
     local vscodeLsCapabilities = vim.lsp.protocol.make_client_capabilities()
     vscodeLsCapabilities.textDocument.completion.completionItem.snippetSupport = true
-    lspconfig["cssls"].setup({
+    vim.lsp.config("cssls", {
       capabilities = vscodeLsCapabilities,
+      on_attach = on_attach,
     })
-    lspconfig["jsonls"].setup({
+    vim.lsp.enable("cssls")
+
+    vim.lsp.config("jsonls", {
       capabilities = vscodeLsCapabilities,
+      on_attach = on_attach,
     })
+    vim.lsp.enable("jsonls")
   end,
 }
