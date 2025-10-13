@@ -1,8 +1,12 @@
 return {
-	"navarasu/onedark.nvim",
-	lazy = false,
-	priority = 999,
-	config = function() -- called every time plugin loads
-		vim.cmd("colorscheme onedark")
-	end,
+  "https://github.com/catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  lazy = false,
+  config = function()
+    require("catppuccin").setup()
+
+    -- setup must be called before loading
+    vim.cmd.colorscheme("catppuccin-macchiato")
+  end
 }
