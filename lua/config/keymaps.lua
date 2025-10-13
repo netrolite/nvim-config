@@ -38,8 +38,8 @@ map("<C-o>", "<C-i>")
 map("<C-i>", "<C-o>")
 
 -- buffers
--- map("H", ":BufferLineCyclePrev<CR>")
--- map("L", ":BufferLineCycleNext<CR>")
+map("H", ":BufferLineCyclePrev<CR>")
+map("L", ":BufferLineCycleNext<CR>")
 map("<leader>q", ":bp<bar>sp<bar>bn<bar>bd!<CR>")
 
 -- telescope keymaps
@@ -54,7 +54,7 @@ keymap.set("n", "gt", ":Telescope lsp_type_definitions<CR>", opts)    -- show ls
 keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", opts)         -- show lsp definitions
 keymap.set("n", "<leader>fa", ":Telescope<CR>", opts)
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap.set("n", "<S-l>", ":Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>", opts)
+-- keymap.set("n", "<S-l>", ":Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>", opts)
 keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", opts)
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap.set("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
