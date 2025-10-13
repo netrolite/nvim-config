@@ -20,8 +20,8 @@ return {
     })
 
     require("mason-nvim-dap").setup({
-      ensure_installed = { "codelldb" },
-      handlers = {}, -- {} to use default config
+      ensure_installed = { "codelldb", "cpptools" },
+      automatic_installation = true,
     })
   end
 }

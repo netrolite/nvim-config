@@ -13,9 +13,31 @@ return {
 
     require("nvim-dap-virtual-text").setup()
 
+    dap.adapters.codelldb = {
+      type = "executable",
+      command = "codelldb", -- or if not in $PATH: "/absolute/path/to/codelldb"
+
+      -- On windows you may have to uncomment this:
+      -- detached = false,
+    }
+
+    dap.configurations.cpp = {
+      {
+        name = "Launch file",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+      },
+    }
+
 
     vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
     vim.keymap.set("n", "<F1>", dap.continue)
+    vim.keymap.set("n", "<F2>", dap.terminate)
     vim.keymap.set("n", "<Up>", dap.restart)
     vim.keymap.set("n", "<Down>", dap.step_over)
     vim.keymap.set("n", "<Left>", dap.step_out)
