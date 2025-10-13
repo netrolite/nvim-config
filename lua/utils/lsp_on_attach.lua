@@ -16,7 +16,7 @@ return function(client, bufnr)
   keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)                                                    -- smart rename
   keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = { source = true } }) end, opts) -- jump to previous diagnostic in buffer
   keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = { source = true } }) end, opts)  -- jump to next diagnostic in buffer
-  keymap.set("n", "<leader>d", function() vim.diagnostic.open_float({ source = true }) end, opts)            -- jump to next diagnostic in buffer
+  keymap.set("n", "<leader>d", function() vim.diagnostic.open_float({ source = true }) end, opts)            -- show diagnostic for what is under cursor
   keymap.set("n", "K", vim.lsp.buf.hover, opts)                                                              -- show documentation for what is under cursor
   keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)                                                     -- mapping to restart lsp if necessary
   keymap.set("n", "<leader>H", ':execute "help " . expand("<cword>")<CR>', opts)
